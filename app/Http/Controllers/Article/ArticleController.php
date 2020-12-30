@@ -19,7 +19,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::paginate(2);
+        // $articles = Article::paginate(2);
+        $articles = Article::get();
 
         return ArticleResource::collection($articles);
     }
